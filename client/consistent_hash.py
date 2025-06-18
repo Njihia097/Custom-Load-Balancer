@@ -58,3 +58,30 @@ class ConsistentHash:
             if current_slot in self.servers:
                 return self.servers[current_slot]
         return None
+
+
+from collections import Counter
+
+if __name__ == "__main__":
+    ch = ConsistentHash(total_slots=512, num_virtual=9)
+
+    # Add 3 servers
+    ch.add_server("Server 1")
+    ch.add_server("Server 2")
+    ch.add_server("Server 3")
+
+    # Count how many requests each server handles
+    request_counts = Counter()
+
+    for i in range(1000):
+        server = ch.get_server(i)
+        request_counts[server] += 1
+
+    print("Request distribution across servers:")
+    for server, count in request_counts.items():
+        print(f"{server}: {count} requests")
+
+    # Optional: Visualize first few slots in the hash ring
+    print("\nSample of hash ring slots:")
+    for slot in sorted(ch.servers.keys())[:10]:
+        print(f"Slot {slot}: {ch.servers[slot]}")
