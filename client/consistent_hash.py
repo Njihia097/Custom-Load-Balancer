@@ -1,7 +1,7 @@
 import re
 
 class ConsistentHash:
-    def __init__(self, total_slots=512, num_virtual=9):
+    def __init__(self, total_slots=512, num_virtual=100):
         self.total_slots = total_slots
         self.num_virtual = num_virtual
         self.servers = {}  # {slot: server_name}
@@ -63,7 +63,7 @@ class ConsistentHash:
 from collections import Counter
 
 if __name__ == "__main__":
-    ch = ConsistentHash(total_slots=512, num_virtual=9)
+    ch = ConsistentHash(total_slots=512, num_virtual=500)
 
     # Add 3 servers
     ch.add_server("Server 1")
