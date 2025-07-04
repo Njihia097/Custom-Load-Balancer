@@ -71,16 +71,16 @@ The following section presents request distribution results and fault-tolerance 
 
 ## A-1
 
-Server 1 handled a majority of the requests and Server 2 handled basically nothing. This is likely
-caused by an imbalance in the consistent hash ring.
-![Picture1](https://github.com/user-attachments/assets/a4e75e31-fe3e-4427-93de-9dcb318b9e78)
+Server Load is distributed between the 3 servers with Server 2 having the highest amount and Server 3 having the lowest amount.
+![Picture1](https://github.com/user-attachments/assets/948454da-a36d-4960-a956-79321f43d16d)
 
 
 ## A-2
 
-As N Increases, the average number of requests decreases until it stabilizes at N=5,6. Therefore, 
+As N Increases, the average number of requests decreases. Therefore, 
 the load balancer scales well as more servers reduce the load.
-![Picture2](https://github.com/user-attachments/assets/fa939bd5-b389-461a-8944-072cede9f334)
+![Picture2](https://github.com/user-attachments/assets/da7bd313-601e-4246-b753-c483984a8b58)
+
 
 ## A-3
 
