@@ -72,14 +72,14 @@ The following section presents request distribution results and fault-tolerance 
 ## A-1
 
 Server Load is distributed between the 3 servers with Server 2 having the highest amount and Server 3 having the lowest amount.
-![Picture1](https://github.com/user-attachments/assets/948454da-a36d-4960-a956-79321f43d16d)
+![Load Distribution](https://github.com/Njihia097/Custom-Load-Balancer/issues/13#issue-3218341379)
 
 
 ## A-2
 
 As N Increases, the average number of requests decreases. Therefore, 
 the load balancer scales well as more servers reduce the load.
-![Picture2](https://github.com/user-attachments/assets/da7bd313-601e-4246-b753-c483984a8b58)
+![Scalability Line Chart](https://github.com/Njihia097/Custom-Load-Balancer/issues/14#issue-3218348827)
 
 
 ## A-3
@@ -99,4 +99,27 @@ the load balancer scales well as more servers reduce the load.
 /rep and /rm
 
 ![image](https://github.com/user-attachments/assets/63dd648f-a66c-49b9-b8b8-d4c5d22dafed)
+
+
+Load Handling 
+
+![image](https://github.com/Njihia097/Custom-Load-Balancer/issues/12#issue-3218314429)
+
+
+## A-4
+
+We explored how changing the hash functions would affect request distribution.
+
+### Modified Hash Functions:
+
+| Function      | Formula Used                      |
+|---------------|-----------------------------------|
+| Request Hash  | `H(i) = (3·i² + 5) % S`           |
+| Server Hash   | `Φ(i, j) = (i² + 4·j) % S`        |
+
+### Observations:
+
+- After modifying the hash functions, **Server 1 handled slightly more requests** than the others.
+- Overall distribution remained **relatively balanced**, with **minor variance**.
+- This confirms that the system is **robust to changes in the hash formula**, and still distributes load efficiently.
 
