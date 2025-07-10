@@ -103,7 +103,7 @@ the load balancer scales well as more servers reduce the load.
 
 Load Handling 
 
-![image](https://github.com/Njihia097/Custom-Load-Balancer/issues/12#issue-3218314429)
+![image](https://github.com/user-attachments/assets/7a7fafa2-5d56-4985-b6b7-53ff16dd49f4)
 
 
 ## A-4
