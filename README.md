@@ -71,7 +71,10 @@ The following section presents request distribution results and fault-tolerance 
 
 ## A-1
 
-Server Load is distributed equally between the 3 servers.
+- Requests were evenly distributed across the 3 server containers (≈3333 each).
+- This confirms that consistent hashing with virtual nodes achieves fair load balancing.
+- No server experienced overload or starvation.
+
 ![Load Distribution](client/load_distribution.png)
 
 
