@@ -3,6 +3,7 @@ import uuid
 import json
 import subprocess
 import sys
+import traceback
 from flask import Flask, request, jsonify
 
 # Import consistent hashing class from Task 2
@@ -128,6 +129,7 @@ def route_request():
         }), 200
 
     except Exception as e:
+        traceback.print_exc()
         return jsonify({
             "message": f"<Error> {str(e)}",
             "status": "failure"
