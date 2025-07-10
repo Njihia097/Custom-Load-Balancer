@@ -72,14 +72,14 @@ The following section presents request distribution results and fault-tolerance 
 ## A-1
 
 Server Load is distributed between the 3 servers with Server 2 having the highest amount and Server 3 having the lowest amount.
-![Load Distribution](https://github.com/Njihia097/Custom-Load-Balancer/issues/13#issue-3218341379)
+![Load Distribution](client/load_distribution.png)
 
 
 ## A-2
 
 As N Increases, the average number of requests decreases. Therefore, 
 the load balancer scales well as more servers reduce the load.
-![Scalability Line Chart](https://github.com/Njihia097/Custom-Load-Balancer/issues/14#issue-3218348827)
+![Scalability Line Chart](client/scalability_chart.png)
 
 
 ## A-3
