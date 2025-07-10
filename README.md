@@ -77,8 +77,7 @@ Server Load is distributed equally between the 3 servers.
 
 ## A-2
 
-As N Increases, the average number of requests decreases. Therefore, 
-the load balancer scales well as more servers reduce the load.
+As N Increases, the average number of requests decreases. Therefore, the load balancer scales well as more servers reduce the load.
 ![Scalability Line Chart](client/scalability_chart.png)
 
 
