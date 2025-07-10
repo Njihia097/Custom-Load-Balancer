@@ -71,7 +71,7 @@ The following section presents request distribution results and fault-tolerance 
 
 ## A-1
 
-Server Load is distributed between the 3 servers with Server 2 having the highest amount and Server 3 having the lowest amount.
+Server Load is distributed equally between the 3 servers.
 ![Load Distribution](client/load_distribution.png)
 
 
