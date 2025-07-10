@@ -108,18 +108,17 @@ Load Handling
 
 ## A-4
 
-We explored how changing the hash functions would affect request distribution.
+We replaced our original polynomial-based hash functions:
 
-### Modified Hash Functions:
+- `H(i) = (i² + 2i + 17) % M`
+- `Φ(i,j) = (i² + j² + 2j + 25) % M`
 
-| Function      | Formula Used                      |
-|---------------|-----------------------------------|
-| Request Hash  | `H(i) = (3·i² + 5) % S`           |
-| Server Hash   | `Φ(i, j) = (i² + 4·j) % S`        |
+with SHA-256–based hashes for both request and virtual node mappings.
 
-### Observations:
+### Observations
 
-- After modifying the hash functions, **Server 1 handled slightly more requests** than the others.
-- Overall distribution remained **relatively balanced**, with **minor variance**.
-- This confirms that the system is **robust to changes in the hash formula**, and still distributes load efficiently.
+- **A‑1**: Load distribution improved significantly — requests were split almost perfectly across replicas (e.g., 3333/3333/3334).
+- **A‑2**: The scalability graph showed smoother averages and fewer inconsistencies as N increased.
+- **Bonus**: Upon server removal, request redistribution became more balanced and less prone to overloading adjacent nodes.
+
 
